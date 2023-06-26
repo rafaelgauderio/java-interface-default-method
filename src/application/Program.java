@@ -25,7 +25,7 @@ System.out.println("\nExample with canadias interest rate (1.0% a month)");
 		CanadaInterestService cis = new CanadaInterestService();
 		double initialValue2 = 200;
 		int months2 = 3;
-		cis.payment(initialValue, months); // 206.06
+		cis.payment(initialValue2, months2); // 206.06
 		
 		
 		

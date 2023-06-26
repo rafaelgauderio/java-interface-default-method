@@ -2,7 +2,7 @@ package services;
 
 import java.security.InvalidParameterException;
 
-public class CanadaInterestService {
+public class CanadaInterestService implements InterestService {
 
 	private double interestRate = 1.0;
 
@@ -15,10 +15,12 @@ public class CanadaInterestService {
 		this.interestRate = interestRate;
 	}
 
+	@Override
 	public double getInterestRate() {
 		return interestRate;
 	}
 
+	@Override
 	public void payment(double initialValue, int months) {
 		if (months < 1 || months > 60) {
 			throw new InvalidParameterException("Months must be greater than zero and smaller than sixty");
